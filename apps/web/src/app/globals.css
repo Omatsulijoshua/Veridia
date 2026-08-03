@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --primary-emerald: #064e3b;
+  --secondary-gold: #d4af37;
+  --accent-glow: rgba(212, 175, 55, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-emerald-primary: var(--primary-emerald);
+  --color-gold-secondary: var(--secondary-gold);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f5f5f4;
+    --primary-emerald: #064e3b;
+    --secondary-gold: #d4af37;
+    --accent-glow: rgba(212, 175, 55, 0.2);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom glassmorphism scrollbar details */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 78, 59, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 78, 59, 0.4);
+}
+
+/* Premium smooth animations */
+.transition-all-300 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,26 @@
+{
+  "name": "veridia-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "pnpm --filter veridia-backend start:dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:admin": "pnpm --filter admin dev",
+    "dev:seller": "pnpm --filter seller dev",
+    "build:all": "pnpm -r build",
+    "lint:all": "pnpm -r lint",
+    "format:all": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,css}\""
+  },
+  "devDependencies": {
+    "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.9.1",
+    "@types/pg": "^8.20.2",
+    "dotenv": "^17.4.2",
+    "eslint": "^8.57.0",
+    "pg": "^8.22.0",
+    "prettier": "^3.2.5",
+    "prisma": "^7.9.1",
+    "tsx": "^4.23.1",
+    "typescript": "^5.4.5"
+  }
+}
